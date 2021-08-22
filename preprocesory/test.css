@@ -1,0 +1,112 @@
+body {
+  background-color: #aec47b;
+}
+body .middle-content {
+  margin: auto;
+  padding: 25px;
+  background-color: rgba(255, 255, 255, 0.822);
+}
+body .middle-content .header-content {
+  margin-bottom: 50px;
+}
+body .middle-content .content-text .sda-navbar {
+  background-color: #aac962;
+  border: 1px solid #81ee8a;
+  height: 25px;
+}
+body .middle-content .content-text .sda-navbar ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+body .middle-content .content-text .sda-navbar ul li {
+  float: left;
+  margin-right: 8px;
+  background-color: coral;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  border-radius: 25px;
+}
+body .middle-content .content-text .sda-navbar ul li.home {
+  background-color: #5a8f7d;
+}
+body .middle-content .content-text .sda-navbar ul li a {
+  padding: 25px;
+  color: #da0707;
+}
+body .middle-content .content-text .sda-navbar ul li a:hover {
+  color: #101edd;
+}
+body .middle-content .content-text .boxes {
+  background-color: #fdd;
+  width: 100%;
+}
+body .middle-content .content-text .boxes > div {
+  height: 150px;
+  width: 100%;
+  border: solid 1px #000;
+  position: relative;
+}
+body .middle-content .content-text .boxes > div .box {
+  background-color: #c5e704;
+  width: 50px;
+  height: 50px;
+}
+body .middle-content .content-text .boxes > div:hover .box.centered-horizontally {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+body .middle-content .content-text .boxes > div:hover .box.centered-vertically {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+body .middle-content .content-text .boxes > div:hover .box.centered-horizontally-and-vertically {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+body .error {
+  border: 1px solid #f00;
+  font-size: 25px;
+  font-weight: bold;
+  padding: 30px;
+  background-color: #fdd;
+}
+body .error--serious {
+  border-width: 3px !important;
+}
+
+.logo-8px {
+  font-size: 8px;
+  height: 8px;
+  width: 8px;
+}
+
+.logo-16px {
+  font-size: 16px;
+  height: 16px;
+  width: 16px;
+}
+
+.logo-24px {
+  font-size: 24px;
+  height: 24px;
+  width: 24px;
+}
+
+.logo-32px {
+  font-size: 32px;
+  height: 32px;
+  width: 32px;
+}
+
+.logo-48px {
+  font-size: 48px;
+  height: 48px;
+  width: 48px;
+}
+
+/*# sourceMappingURL=test.css.map */

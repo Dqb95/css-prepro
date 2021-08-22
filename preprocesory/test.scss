@@ -1,0 +1,91 @@
+@import 'variables';
+@import 'utils';
+
+body {
+    background-color: $body-bg-color;
+    .middle-content {
+        margin: auto;
+        padding: 25px;
+
+        background-color: $content-gb-color;
+        .header-content {
+            margin-bottom: 50px;
+        }
+        .content-text {
+            .sda-navbar {
+                background-color: rgb(170, 201, 98);
+                border: 1px solid rgb(129, 238, 138);
+                height: 25px;
+                ul {
+                    margin: 0;
+                    padding: 0;
+                    list-style-type: none;
+                    li {
+                        float: left;
+                        margin-right: pow(2, 3) * 1px;
+                        background-color: coral;
+
+                        // @include round-corner(20px);
+                        @include prefix(border-radius, 25px, webkit moz);
+                        &.home {
+                            background-color: rgb(90, 143, 125);
+                        }
+                        a {
+                            padding: 25px;
+                            color: rgb(218, 7, 7);
+                            &:hover {
+                                color: rgb(16, 30, 221);
+                            }
+                        }
+                    }
+                }
+            }
+            .boxes {
+                background-color: #fdd;
+                width: 100%;
+                & > div {
+                    height: 150px;
+                    width: 100%;
+                    border: solid 1px #000;
+                    position: relative;
+                    .box {
+                        background-color: rgb(197, 231, 4);
+                        width: 50px;
+                        height: 50px;
+                    }
+                    &:hover {
+                        .box {
+                            &.centered-horizontally {
+                                @include center("horizontal");
+                            }
+                            &.centered-vertically {
+                                @include center("vertical");
+                            }
+                            &.centered-horizontally-and-vertically {
+                                @include center("both");
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .error {
+        border: 1px solid #f00;
+        font-size: 25px;
+        font-weight: bold;
+        padding: 30px;
+        background-color: #fdd;
+        &--serious {
+            border-width: 3px !important;
+        }
+    }
+}
+
+@each $var in $logo-sizes {
+    .logo-#{$var} {
+        font-size: $var;
+        height: $var;
+        width: $var;
+    }
+}

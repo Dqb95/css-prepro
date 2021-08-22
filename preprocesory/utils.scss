@@ -1,0 +1,38 @@
+@mixin prefix($property, $value, $prefixes) {
+    @each $prefix in $prefixes {
+        -#{$prefix}-#{$property}: $value;
+    }
+    #{$property}: $value
+}
+
+@mixin round-corner($value) {
+    border-top-left-radius: $value;
+    border-top-right-radius: $value;
+    border-bottom-right-radius: $value;
+    border-bottom-left-radius: $value;
+}
+
+@mixin center($direction) {
+    position: absolute;
+    @if $direction == "both" {
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    } @else if $direction == "vertical" {
+        top: 50%;
+        transform: translateY(-50%);
+    } @else if $direction == "horizontal" {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+@function pow($base, $exponent) {
+    $result: 1;
+    @for $_ from 1 through $exponent {
+        @debug($_);
+        $result: $result * $base;
+    }
+    @return $result;
+}
+
